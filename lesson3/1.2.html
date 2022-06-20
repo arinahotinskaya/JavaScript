@@ -1,0 +1,54 @@
+<!-- Товары в корзине хранятся в массиве. 
+Задачи:
+  a. Организовать такой массив для хранения товаров в корзине;
+  b. Организовать функцию countBasketPrice, которая будет считать стоимость корзины. -->
+
+<html>
+<body>
+    <script>
+        function countBasketPrice(){
+            let summary = 0;
+            for (let elem of basket){
+                summary += elem.price;
+                console.log("Товар " + elem.id + " - "+ elem.product + " стоит: " + elem.price + " рублей");
+            }
+            console.log("Стоимость общей корзины: " + summary + " рублей");
+        }
+
+        let basket = [
+            {
+                id: 1,
+                product: "'корм для птиц'",
+                price: 267
+            },
+            {
+                id: 2,
+                product: "'мелок для животных'",
+                price: 55
+            },
+            {
+                id: 3,
+                product: "'витамины'",
+                price: 198
+            },
+            {
+                id: 4,
+                product: "'ошейник'",
+                price: 345
+            },
+            {
+                id: 5,
+                product: "'клетка'",
+                price: 2500
+            },
+            {
+                id: 6,
+                product: "'косточка'",
+                price: 210
+            }
+        ];
+        
+        countBasketPrice();
+    </script>
+</body>
+</html>

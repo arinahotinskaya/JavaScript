@@ -1,0 +1,89 @@
+<!-- Товары в корзине хранятся в массиве. 
+Задачи:
+  a. Организовать такой массив для хранения товаров в корзине;
+  b. Организовать функцию countBasketPrice, которая будет считать стоимость корзины. -->
+
+<html>
+<body>
+    <script>
+        // вариант 1
+
+        let basket = {
+            product_name: ["корм для птиц", "мелок для животных", "витамины", "ошейник", "клетка", "косточка", "поводок"],
+            product_id: [1, 2, 3, 4, 5, 6, 7],
+            product_price: [267, 55, 198, 345, 2500, 210, 780]
+        };
+
+        let summary = {
+            countBasketPrice() {
+                let summary = 0;
+                for(let i = 0; i < basket.product_name.length; i++){
+                    summary += basket.product_price[i];
+                    console.log("Товар " + basket.product_id[i] + " ("+ basket.product_name[i] + ") стоит: " + basket.product_price[i] + " рублей");
+                }
+                console.log("Стоимость общей корзины: " + summary + " рублей");
+            }
+        }
+        
+        summary.countBasketPrice();
+
+        //вариант 2 (пыталась через switch - не работает. В таком варианте тоже не работает, не понимаю почему). Хотела сделать, чтобы покупатель сам мог выбирать продукты и добавлять их в корзину, но не получилось
+        // let sum = 0;
+        // let check = true;
+
+        // let basket = {
+        //     // product_name: 'name',
+        //     price_koef = 47
+        //     // setName(name){
+        //     //     this.product_name = name;
+        //     // }
+        // }
+
+        // let price = {
+        //     setProductPrice(len){
+        //         sum += len * basket.price_koef;
+        //         return sum;
+        //     }
+        // }
+
+        // while(check){
+        //     let choise = prompt('Какой продукт хотите добавить в корзину? 1 - "корм для птиц", 2 - "мелок для животных", 3 - "витамины", 4 - "ошейник", 5 - "клетка", 6 - "косточка", 7 - "поводок". Если не хотите больше ничего покупать, введите 0.');
+        //     if(choise == 0){
+        //         alert("Стоимость общей корзины: " + sum + ". Спасибо за покупку!")
+        //         check = false;
+        //     } else if(choise == '1'){
+        //         choise = "корм для птиц";
+        //         // basket.setName(choise);
+        //         sum += price.setProductPrice(choise.length);
+        //     } else if(choise == '2'){
+        //         choise = "мелок для животных";
+        //         // basket.setName(choise);
+        //         sum += price.setProductPrice(choise.length);
+        //     } else if(choise == '3'){
+        //         choise = "витамины";
+        //         // basket.setName(choise);
+        //         sum += price.setProductPrice(choise.length);
+        //     } else if(choise == '4'){
+        //         choise = "ошейник";
+        //         // basket.setName(choise);
+        //         sum += price.setProductPrice(choise.length);
+        //     } else if(choise == '5'){
+        //         choise = "клетка";
+        //         // basket.setName(choise);
+        //         sum += price.setProductPrice(choise.length);
+        //     } else if(choise == '6'){
+        //         choise = "косточка";
+        //         // basket.setName(choise);
+        //         sum += price.setProductPrice(choise.length);
+        //     } else if(choise == '7'){
+        //         choise = "поводок";
+        //         // basket.setName(choise);
+        //         sum += price.setProductPrice(choise.length);
+        //     } else {
+        //         alert("Такого продукта нет!");
+        //     }
+        // }
+    
+    </script>
+</body>
+</html>
